@@ -37,7 +37,7 @@ app.post('/upload/', upload.single('file'), async (req, res) => {
 });
 
 app.get("/api", (req, res) => {
-    res.send(console.log("funcionando api"));
+    res.send("ola");
 })
 
 app.get("/", (req, res) => {
