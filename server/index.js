@@ -6,6 +6,7 @@ import excelToJson from './excelToJson.js';
 const app = express();
 
 app.use(cors());
+const port = process.env.PORT || 4000;
 
 //*Multer Config*// 
 
@@ -44,6 +45,6 @@ app.get("/", (req, res) => {
     res.send(console.log("funcionando"));
 })
 
-app.listen(8080, () => {
+app.listen(port, () => {
     console.log("app running on port 8080");
 })
