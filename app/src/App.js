@@ -1,10 +1,12 @@
 import { Header, Jumbotron, Buttons, Textarea, InputFile } from './components';
 import { Row, Col, ButtonGroup, Container } from 'react-bootstrap';
 import { React, useState } from 'react';
+import api from './services/api';
 
 function App() {
 
   const [textareaValue, setTextareaValue] = useState("");
+  const [file, setFile] = useState();
 
   const handleClearTextarea = () => {
     setTextareaValue("");
@@ -21,8 +23,27 @@ function App() {
     document.execCommand("copy");
   }
 
-  return (
+  const handleChangeInput = (e) => {
+    setFile(e.target.files[0]);
+    console.log(file);
+  }
 
+  const handleConvert = () => {
+    const formData = new FormData();
+    formData.append('file', file);
+
+    const config = {
+      headers: {
+        'content-type': 'multipart/form-data'
+      }
+    }
+    api.post("/upload/", formData, config).then( res => {
+  
+      setTextareaValue(JSON.stringify(res.data));
+    });
+  }
+
+  return (
     <>
       <Header />
       <Jumbotron />
@@ -31,13 +52,16 @@ function App() {
         <Row>
 
           <Col xs={12} md={8}>
-            <InputFile />
+            <InputFile
+              onChange={handleChangeInput}
+              />
           </Col>
 
           <Col xs={12} md={3}>
             <ButtonGroup className="mb-2">
               <Buttons
                 color="btn btn-success"
+                action={handleConvert}
               >
                 Convert
               </Buttons>
