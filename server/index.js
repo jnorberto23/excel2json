@@ -36,6 +36,11 @@ app.post('/upload/', upload.single('file'), async (req, res) => {
     }
 });
 
+app.get("/api", (req, res) => {
+    res.send(console.log("funcionando"));
+})
+
+
 app.listen(8080, () => {
     console.log("app running on port 8080");
 })
