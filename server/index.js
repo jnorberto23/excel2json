@@ -29,7 +29,7 @@ app.post('/upload/', upload.single('file'), async (req, res) => {
 
     if (res.status(200)) {
         excelToJson(req.file.path, (rest) => {
-            const data = JSON.stringify(rest);
+            const data = rest;
             res.send({
                 data
             })
