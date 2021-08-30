@@ -24,23 +24,41 @@ function App() {
   }
 
   const handleChangeInput = (e) => {
-    setFile(e.target.files[0]);
-    console.log(file);
+    if(e.target.files[0]){
+      if(e.target.files[0].size > 10485760){
+        alert("Erro: O arquivo é muito grande! Por favor, faça o upload de um arquivo menor do que 10Mb");
+        setFile("");
+     }
+     else{
+      setFile(e.target.files[0]);
+      console.log(file);
+     }
+    }
+    else{
+      setFile("");
+    }
   }
 
   const handleConvert = () => {
-    const formData = new FormData();
-    formData.append('file', file);
 
-    const config = {
-      headers: {
-        'content-type': 'multipart/form-data'
-      }
-    }
-    api.post("/upload/", formData, config).then( res => {
+    if(file != ""){
+      const formData = new FormData();
+      formData.append('file', file);
   
-      setTextareaValue(JSON.stringify(res.data));
-    });
+      const config = {
+        headers: {
+          'content-type': 'multipart/form-data'
+        }
+      }
+      api.post("/upload/", formData, config).then(res => {
+  
+        setTextareaValue(JSON.stringify(res.data));
+      });
+    }
+    else{
+      alert("Erro: Nenhum arquivo selecionado.");
+    }
+    
   }
 
   return (
@@ -55,7 +73,7 @@ function App() {
             <InputFile
               onChange={handleChangeInput}
               accept=".xls, .xlsx, .xlsm"
-              />
+            />
           </Col>
 
           <Col xs={12} md={3}>
@@ -73,12 +91,14 @@ function App() {
                 Copy
               </Buttons>
 
+              {/* 
               <Buttons
                 color="btn btn-Primary"
               >
                 Download
               </Buttons>
-
+              
+              */}
               <Buttons
                 color="btn btn-danger"
                 action={handleClearTextarea}>
