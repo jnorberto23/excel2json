@@ -41,7 +41,7 @@ function App() {
 
   const handleConvert = () => {
 
-    if(file != ""){
+    if(file !== ""){
       const formData = new FormData();
       formData.append('file', file);
   
