@@ -3,7 +3,7 @@ import { Form } from 'react-bootstrap';
 
 
 const InputFile = (props) => {
-    const {onChange, multiple} = props;
+    const {onChange, multiple, accept} = props;
     return (
         <Form.Group 
         controlId="formFile" 
@@ -11,7 +11,8 @@ const InputFile = (props) => {
             <Form.Control 
             type="file" 
             onChange={onChange}
-            multiple={multiple}/>
+            multiple={multiple}
+            accept={accept}/>
         </Form.Group>
 
     )
