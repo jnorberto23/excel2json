@@ -54,7 +54,7 @@ function App() {
           <Col xs={12} md={8}>
             <InputFile
               onChange={handleChangeInput}
-              accept=".xls, .xlsx"
+              accept=".xls, .xlsx, .xlsm"
               />
           </Col>
 
