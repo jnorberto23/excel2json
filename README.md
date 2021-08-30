@@ -1,6 +1,6 @@
 # excel2json
 
-<h1>Converta uma planilha em Excel para JSON</h1>
+<h4>Converta uma planilha em Excel para JSON</h4>
 
 <p>Acesse: <a href="https://excel2json-app.vercel.app/">excel2json</a></p>
 
