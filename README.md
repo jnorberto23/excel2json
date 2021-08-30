@@ -22,20 +22,20 @@
 
 ### Front-end
 
-<a href="https://pt-br.reactjs.org/">ReactJS</a>
-<a href="https://styled-components.com/">Styled Components</a>
-<a href="https://react-bootstrap.github.io/">React Bootstrap</a>
-<a href="https://github.com/axios/axios">Axios</a>
+<a href="https://pt-br.reactjs.org/" target="_blank">ReactJS</a>
+<a href="https://styled-components.com/" target="_blank">Styled Components</a>
+<a href="https://react-bootstrap.github.io/" target="_blank">React Bootstrap</a>
+<a href="https://github.com/axios/axios" target="_blank">Axios</a>
 
-<p>Deploy na <a href="https://vercel.com/">Vercel</a></p>
+<p>Deploy na <a href="https://vercel.com/" target="_blank">Vercel</a></p>
 
 ### Back-end
 
-<a href="https://nodejs.org/en/">Node.js</a>
-<a href="https://github.com/expressjs/multer">Multer</a>
-<a href="https://www.npmjs.com/package/xlsx">xlsx (SheetJS)</a>
-<a href="https://expressjs.com/pt-br/">Express</a>
+<a href="https://nodejs.org/en/" target="_blank">Node.js</a>
+<a href="https://github.com/expressjs/multer" target="_blank">Multer</a>
+<a href="https://www.npmjs.com/package/xlsx" target="_blank">xlsx (SheetJS)</a>
+<a href="https://expressjs.com/pt-br/" target="_blank">Express</a>
 
-<p>Deploy na <a href="https://heroku.com/">Heroku</a></p>
+<p>Deploy na <a href="https://heroku.com/" target="_blank">Heroku</a></p>
 
 
