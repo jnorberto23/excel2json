@@ -10,7 +10,7 @@
 <p align="center"><a href="https://restaurants-search-dun.vercel.app/">Restaurant Finder</a></p>
 
 <p align="center">
-  <img alt="web-preview" src=".github/background.png" width="100%">
+  <img alt="web-preview" src=".github/preview.png" width="100%">
 </p>
 
 
