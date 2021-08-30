@@ -1,13 +1,9 @@
 # excel2json
 
-<p align="center">
-    <img src=".github/logo.JPG"
-    alt="netflix-font" border="0">
- </p>
 
 <p align="center">Converta uma planilha em Excel para JSON</p>
 
-<p align="center"><a href="https://restaurants-search-dun.vercel.app/">Restaurant Finder</a></p>
+<p align="center"><a href="https://excel2json-app.vercel.app/">excel2json</a></p>
 
 <p align="center">
   <img alt="web-preview" src=".github/preview.png" width="100%">
