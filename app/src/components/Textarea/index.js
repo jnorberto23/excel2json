@@ -1,28 +1,29 @@
 import React from 'react';
 import { InputGroup, FormControl, Container, Row } from 'react-bootstrap';
-import { Wrapper } from './styled';
+import { Wrapper, WrapperTextArea} from './styled';
 
 const Textarea = (props) => {
  const {value, onChange, id} = props;
     return (
 
         <Container>
-            <Wrapper>
+              <Wrapper>
                 <Row>
                     <InputGroup>
-                        <FormControl 
+                        <WrapperTextArea 
                         as="textarea" 
                         rows="13" 
+                        readOnly
                         aria-label="With textarea" 
                         value={value}
                         onChange={onChange}
                         id={id}
                         />
                     </InputGroup>
+                  
                 </Row>
-            </Wrapper>
+                </Wrapper>
         </Container>
-
     )
 }
 

@@ -107,15 +107,16 @@ function App() {
             </ButtonGroup>
 
           </Col>
-
-        </Row>
-      </Container>
-
-      <Textarea
+          <Textarea
         value={textareaValue}
         onChange={handleChangeTextarea}
         id="textarea"
       />
+        </Row>
+        
+  
+      </Container>
+
 
     </>
   );
