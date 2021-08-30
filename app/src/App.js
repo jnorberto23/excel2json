@@ -26,7 +26,7 @@ function App() {
   const handleChangeInput = (e) => {
     if(e.target.files[0]){
       if(e.target.files[0].size > 500000){
-        alert("Erro: O arquivo é muito grande! Por questões de desempenho do servidor, o tamamho máximo do seu arquivo não pode ser superior a 500kb.");
+        alert("Erro: O arquivo é muito grande! Tamanho máximo: 500kb.");
         setFile("");
      }
      else{
