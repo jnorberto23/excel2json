@@ -1,5 +1,5 @@
 import React from 'react';
-import { InputGroup, FormControl, Container, Row } from 'react-bootstrap';
+import { InputGroup, Container, Row } from 'react-bootstrap';
 import { Wrapper, WrapperTextArea} from './styled';
 
 const Textarea = (props) => {
