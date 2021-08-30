@@ -36,6 +36,6 @@
 <p><a href="https://www.npmjs.com/package/xlsx" target="_blank">- xlsx (SheetJS)</a></p>
 <p><a href="https://expressjs.com/pt-br/" target="_blank">- Express</a></p>
 
-<p>Deploy na <a href="https://heroku.com/" target="_blank">- Heroku</a></p>
+<p>Deploy na <a href="https://heroku.com/" target="_blank">Heroku</a></p>
 
 
