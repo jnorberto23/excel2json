@@ -29,6 +29,9 @@ app.post('/upload/', upload.single('file'), async (req, res) => {
     }
 });
 
+app.get('/', (req, res) => {
+console.log("listening");
+});
 
 app.listen(port, () => {
     console.log(`app running on ${port}`);
