@@ -1,12 +1,16 @@
 import express from 'express';
 import cors from 'cors';
+import multer from 'multer';
 import excelToJson from './utils/excelToJson.js';
-import upload from './utils/multerConfig.js';
+import multerConfig from './utils/multerConfig.js';
 
 const app = express();
-
 app.use(cors());
 const port = process.env.PORT || 3000;
+
+//*Multer Config*// 
+
+const upload = multer(multerConfig); 
 
 //*Upload Route*//
 
@@ -27,10 +31,6 @@ app.post('/upload/', upload.single('file'), async (req, res) => {
             error: "Ocorreu um erro ao realizar o upload do arquivo, tente novamente"
         });
     }
-});
-
-app.get('/', (req, res) => {
-console.log("listening");
 });
 
 app.listen(port, () => {
