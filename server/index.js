@@ -1,36 +1,42 @@
 import express from 'express';
 import cors from 'cors';
-import multer from 'multer';
-import excelToJson from './utils/excelToJson.js';
-import multerConfig from './utils/multerConfig.js';
+import formidable from 'formidable';
+import xlsx from "xlsx";
 
 const app = express();
 app.use(cors());
 const port = process.env.PORT || 3000;
 
-//*Multer Config*// 
+const transform = (file) => {
 
-const upload = multer(multerConfig); 
+    return new Promise((resolve, reject) => {
+        const dataPathExcel = file.path;
 
-//*Upload Route*//
+        var workbook = xlsx.readFile(dataPathExcel);
+        const sheetName = workbook.SheetNames[0]
+        const sheetValue = workbook.Sheets[sheetName];
+        
+        const excelData = xlsx.utils.sheet_to_json(sheetValue);
 
-app.post('/upload/', upload.single('file'), async (req, res) => {
-    if (res.status(200)) {
-        excelToJson(req.file.path).then((data) =>{
-            res.send({
-                data
-            });
-        }).catch((error) => {
-            res.send({
-                error
-            });
-        })
-    }
-    else{
-        res.send({
-            error: "Ocorreu um erro ao realizar o upload do arquivo, tente novamente"
-        });
-    }
+        if (!Object.keys(excelData).length == 0 ) {
+            resolve([excelData, sheetName]);
+        }
+        else {
+            reject("Ocorreu um pequenino erro ali, ja volto");
+        }
+    });
+}
+
+app.post('/upload/', (req, res) => {
+        const form = new formidable.IncomingForm();
+        form.parse(req, (err, fields, files) => {
+           files = files[Object.keys(files)[0]];
+           transform(files).then(([data, sheet]) => {
+               res.send({ [sheet] : data });
+           }).catch((err) => {
+               res.send(err);
+           });
+       })   
 });
 
 app.listen(port, () => {
