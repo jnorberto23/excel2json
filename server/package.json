@@ -16,7 +16,6 @@
     "express": "^4.17.1",
     "formidable": "^1.2.2",
     "git-subtree": "^0.2.1",
-    "multer": "^1.4.3",
     "xlsx": "^0.17.1"
   },
   "devDependencies": {
