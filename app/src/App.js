@@ -50,7 +50,7 @@ function App() {
         }
       }
       api.post("/upload/", formData, config).then(res => {
-        console.log("acertouuu")
+    
         setTextareaValue(JSON.stringify(res.data));
       }).catch((err) => {
         console.log(err)

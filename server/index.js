@@ -22,7 +22,7 @@ const transform = (file) => {
             resolve([excelData, sheetName]);
         }
         else {
-            reject("Ocorreu um pequenino erro ali, ja volto");
+            reject("Ocorreu um erro, tente novamente.");
         }
     });
 }
