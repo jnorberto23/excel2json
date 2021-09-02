@@ -27,10 +27,10 @@
 ### Back-end
 
 <p><a href="https://nodejs.org/en/" target="_blank">- Node.js</a></p>
-<p><a href="https://github.com/expressjs/multer" target="_blank">- Multer</a></p>
+<p><a href="https://www.npmjs.com/package/formidable" target="_blank">- Formidable</a></p>
 <p><a href="https://www.npmjs.com/package/xlsx" target="_blank">- xlsx (SheetJS)</a></p>
 <p><a href="https://expressjs.com/pt-br/" target="_blank">- Express</a></p>
 
-<p>Deploy na <a href="https://heroku.com/" target="_blank">Heroku</a></p>
+<p>Deploy na <a href="https://vercel.com/" target="_blank">Vercel</a></p>
 
 
