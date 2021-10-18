@@ -9,10 +9,6 @@
 </p>
 
 
-## Sobre o projeto
-
-<p>Projeto pessoal em ReactJS e Node.js</p>
-
 ## Tecnologias e bibliotecas utilizadas
 
 ### Front-end
